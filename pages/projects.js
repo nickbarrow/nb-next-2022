@@ -1,7 +1,71 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
-import styles from '../scss/Home.module.css'
+import styled from 'styled-components'
+import { SRLWrapper } from "simple-react-lightbox"
+
+import styles from '../scss/Home.module.scss'
+
+
+const Timeline = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding-left: 10%;
+`;
+
+const TimelineH2 = styled.h2`
+  width: 100%;
+  text-align: left;
+`;
+
+const TLItem = styled.a`
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid dodgerblue;
+  text-align: left;
+  width: 90%;
+  height: 100%;
+  margin-left: 20px;
+  position: relative;
+  transition: all ease .3s;
+  margin-bottom: 20px;
+  &:hover {
+    color: dodgerblue;
+  }
+  &:before {
+    content: attr(data-year);
+    position: absolute;
+    left: -65px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: dodgerblue;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 12px;
+    font-weight: bolder;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  p {
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+    margin: .5rem 0 ;
+  }
+`;
+
+const TLImg = styled.img`
+  display: block;
+  border: 1px solid #eee;
+  border-radius: 7px;
+  padding: 5px;
+  max-width: 100%;
+  margin: 0 auto 30px;
+`;
 
 export default function Projects() {
   return (
@@ -21,36 +85,35 @@ export default function Projects() {
           Previous Work {"&"} Projects
         </h1>
 
-        {/* <p className={styles.description}>
-        </p> */}
+        <p className={styles.description}>
+          Here is a fairly comprehensive list of my projects, beginning with professional jobs.
+        </p>
 
-        <div className={styles.grid}>
-          <a href="https://github.com/nickbarrow" className={styles.card}>
-            <h2>GitHub &rarr;</h2>
-            <p>Link to my public GitHub repos.</p>
-          </a>
+        <TimelineH2>Shindigz:</TimelineH2>
+        <Timeline>
+          <TLItem data-year="Feb 2020" href="https://github.com/nickbarrow">
+            <TLImg src="/images/sz_old.png" alt="Shindigz Website in February 2020" />
+            <p style={{ marginBottom: '30px' }}>Shindigz website when I joined the team.</p>
+            <TLImg src="/images/sz_old_mobile.png" alt="Shindigz Website in February 2020" />
+            <p>Previous mobile design which was very difficult to use.</p>
+          </TLItem>
 
-          <a href="https://nb-commerce.vercel.app/" className={styles.card}>
-            <h2>NB Commerce &rarr;</h2>
-            <p>My fake online store.</p>
-            {/* <a href="github.com">View on GitHub &rarr;</a> */}
-          </a>
+          <TLItem data-year="Jul 2020" href="https://github.com/nickbarrow">
+            <TLImg src="images/sz_2020.png" alt="Shindigz Website in July 2020" />
+            <p style={{ marginBottom: '30px' }}>Shindigz after initial redesign.</p>
+            <TLImg src="/images/sz_2020_mobile.png" alt="Shindigz Website in July 2020" />
+            <p style={{ marginBottom: '30px' }}>Completely redesigned mobile experience.</p>
+            <TLImg src="/images/sz_2020_mobile_nav.png" alt="Shindigz Website in July 2020" />
+            <p>All new mobile navigation.</p>
+          </TLItem>
 
-          {/* <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a> */}
-        </div>
+          <TLItem data-year="Mar 2021" href="https://github.com/nickbarrow">
+            <TLImg src="images/sz_new.png" alt="Shindigz Website in March 2021" />
+            <p style={{ marginBottom: '30px' }}>Shindigz on Shopify and BRX SPA frontend.</p>
+            <TLImg src="/images/sz_new_mobile.png" alt="Shindigz Website in March 2021" />
+            <p style={{ marginBottom: '30px' }}>New mobile experience.</p>
+          </TLItem>
+        </Timeline>
       </main>
 
       <footer className={styles.footer}>

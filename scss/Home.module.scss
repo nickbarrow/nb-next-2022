@@ -3,16 +3,19 @@
 
 .main {
   min-height: 100vh;
-  padding: 4rem;
+  padding: 1rem;
   flex: 1;
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
   align-items: center;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
   border-left: 1px solid #eee;
   border-right: 1px solid #eee;
+  @media (min-width: 992px) { 
+    padding: 4rem;
+  }
 }
 
 .footer {
@@ -45,7 +48,7 @@
 .title {
   margin: 0;
   line-height: 1.15;
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 .title,

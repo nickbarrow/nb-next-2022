@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
-import styles from '../scss/Home.module.css'
+import styles from '../scss/Home.module.scss'
 
 export default function Home() {
   return (
@@ -16,7 +16,8 @@ export default function Home() {
         <h1 className={styles.title}>
           Welcome, I{"'"}m <a >Nick Barrow</a>
         </h1>
-        <p style={{ fontSize: '1.5rem' }}>📍 Fort Wayne, IN</p>
+        <img src='/images/me.jpg' style={{ maxWidth: '150px', margin: '20px auto', borderRadius: '50%' }} />
+        <p style={{ fontSize: '1.5rem', margin: '0' }}>📍 Fort Wayne, IN</p>
 
         <p className={styles.description}>
           I{"'"}m a <code className={styles.code}>web developer</code> (HTML/CSS/JS) currently looking for full-time work, preferrably fully remote positions.
