@@ -91,14 +91,14 @@ export default function Projects() {
 
         <TimelineH2>Shindigz:</TimelineH2>
         <Timeline>
-          <TLItem data-year="Feb 2020" href="https://github.com/nickbarrow">
+          <TLItem data-year="Feb 2020" href="web.archive.org/web/20200229180107/www.shindigz.com">
             <TLImg src="/images/sz_old.png" alt="Shindigz Website in February 2020" />
             <p style={{ marginBottom: '30px' }}>Shindigz website when I joined the team.</p>
             <TLImg src="/images/sz_old_mobile.png" alt="Shindigz Website in February 2020" />
             <p>Previous mobile design which was very difficult to use.</p>
           </TLItem>
 
-          <TLItem data-year="Jul 2020" href="https://github.com/nickbarrow">
+          <TLItem data-year="Jul 2020" href="web.archive.org/web/20200229180107/www.shindigz.com">
             <TLImg src="images/sz_2020.png" alt="Shindigz Website in July 2020" />
             <p style={{ marginBottom: '30px' }}>Shindigz after initial redesign.</p>
             <TLImg src="/images/sz_2020_mobile.png" alt="Shindigz Website in July 2020" />
@@ -107,11 +107,15 @@ export default function Projects() {
             <p>All new mobile navigation.</p>
           </TLItem>
 
-          <TLItem data-year="Mar 2021" href="https://github.com/nickbarrow">
+          <TLItem data-year="Mar 2021" href="https://www.shindigz.com">
             <TLImg src="images/sz_new.png" alt="Shindigz Website in March 2021" />
             <p style={{ marginBottom: '30px' }}>Shindigz on Shopify and BRX SPA frontend.</p>
             <TLImg src="/images/sz_new_mobile.png" alt="Shindigz Website in March 2021" />
             <p style={{ marginBottom: '30px' }}>New mobile experience.</p>
+          </TLItem>
+
+          <TLItem data-year="Now" href="https://github.com/nickbarrow">
+            <p style={{ marginBottom: '30px' }}>Check out my GitHub for a list of my public repos.</p>
           </TLItem>
         </Timeline>
       </main>
