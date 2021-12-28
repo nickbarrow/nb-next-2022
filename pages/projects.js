@@ -122,16 +122,16 @@ export default function Projects() {
         }}>Personal Projects:</h2>
     
         <Timeline>
-          <TimelineH2>Beer Properties:</TimelineH2>
-          <TLItem data-year="2021" href="https://r4tws.csb.app/">
-            <TLImg src="/images/beer.png" alt="PBJ Chan" />
-            <p style={{ marginBottom: '30px' }}>A real estate property listing site. Front end in React, backend on Google Firebase, WIP.</p>
-          </TLItem>
-
           <TimelineH2>Secret Santa 2021:</TimelineH2>
           <TLItem data-year="2021" href="https://ss2021.vercel.app/">
             <TLImg src="/images/ss.png" alt="Secret Santa 2021" />
             <p style={{ marginBottom: '30px' }}>A Secret Santa group creation app with gift requests and match generation.</p>
+          </TLItem>
+
+          <TimelineH2>Beer Properties:</TimelineH2>
+          <TLItem data-year="2021" href="https://r4tws.csb.app/">
+            <TLImg src="/images/beer.png" alt="PBJ Chan" />
+            <p style={{ marginBottom: '30px' }}>A real estate property listing site. Front end in React, backend on Google Firebase, WIP.</p>
           </TLItem>
 
           <TimelineH2>PBJ Chan:</TimelineH2>
