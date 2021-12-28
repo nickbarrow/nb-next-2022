@@ -28,7 +28,7 @@ const TLItem = styled.a`
   margin-left: 20px;
   position: relative;
   transition: all ease .3s;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   &:hover {
     color: dodgerblue;
   }
@@ -82,12 +82,12 @@ export default function Projects() {
           </a>
         </Link>
         <h1 className={styles.title}>
-          Previous Work {"&"} Projects
+          Work Experience
         </h1>
-
-        <p className={styles.description}>
-          Here is a fairly comprehensive list of my projects, beginning with professional jobs.
-        </p>
+        <hr style={{
+          width: '30%',
+          margin: '20px'
+        }} />
 
         <TimelineH2>Shindigz:</TimelineH2>
         <Timeline>
@@ -113,9 +113,38 @@ export default function Projects() {
             <TLImg src="/images/sz_new_mobile.png" alt="Shindigz Website in March 2021" />
             <p style={{ marginBottom: '30px' }}>New mobile experience.</p>
           </TLItem>
+        </Timeline>
 
-          <TLItem data-year="Now" href="https://github.com/nickbarrow">
-            <p style={{ marginBottom: '30px' }}>Check out my GitHub for a list of my public repos.</p>
+        <h2 style={{
+          fontSize: '28px',
+          textDecoration: 'underline',
+          marginTop: '50px'
+        }}>Personal Projects:</h2>
+    
+        <Timeline>
+          <TimelineH2>Beer Properties:</TimelineH2>
+          <TLItem data-year="2021" href="https://r4tws.csb.app/">
+            <TLImg src="/images/beer.png" alt="PBJ Chan" />
+            <p style={{ marginBottom: '30px' }}>A real estate property listing site. Front end in React, backend on Google Firebase, WIP.</p>
+          </TLItem>
+
+          <TimelineH2>Secret Santa 2021:</TimelineH2>
+          <TLItem data-year="2021" href="https://ss2021.vercel.app/">
+            <TLImg src="/images/ss.png" alt="Secret Santa 2021" />
+            <p style={{ marginBottom: '30px' }}>A Secret Santa group creation app with gift requests and match generation.</p>
+          </TLItem>
+
+          <TimelineH2>PBJ Chan:</TimelineH2>
+          <TLItem data-year="2020" href="https://xwhpg.csb.app/">
+            <TLImg src="/images/pbj.png" alt="PBJ Chan" />
+            <p style={{ marginBottom: '30px' }}>PBJ Chan. A forum to share your delicious PBJs. Front end using React, backend on Google Firebase.</p>
+            <p>Features realtime feed, replies, reactions, score.</p>
+          </TLItem>
+
+          <TimelineH2>GitHub:</TimelineH2>
+          <TLItem data-year="2021" href="https://github.com/nickbarrow">
+            {/* <TLImg src="/images/pbj.png" alt="PBJ Chan" /> */}
+            <p>See my GitHub for a full list of projects.</p>
           </TLItem>
         </Timeline>
       </main>
